@@ -13,9 +13,10 @@ import { ConfettiService } from './confetti.service';
 })
 export class AppComponent {
   
-constructor(private confettiService: ConfettiService) { }
+constructor(private confettiService: ConfettiService) { this.changeText = false;}
 
 // Some function somewhere:
+  changeText = false;
 
   title = 'valentine';
   logoWidthNo = 80;
@@ -62,7 +63,27 @@ constructor(private confettiService: ConfettiService) { }
   }); 
   }
 
+  left = '0';
+  top = '0';
+   onChangeText(){
+    //console.log(this.changeText)
+    this.changeText = !this.changeText;
+    this.left = `${Math.ceil(Math.random() * 90)}%`;
+    this.top = `${Math.ceil(Math.random() * 90)}%`;
+    console.log(this.left,this.top)
+
+   }
+
+   pr = 0
+   movebutton(){
+    if(this.pr == 0){
+      this.pr=300
+    }
+    else{
+      this.pr = 0
+    }
+   }
   
- 
+
 
 }

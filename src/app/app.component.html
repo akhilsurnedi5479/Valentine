@@ -13,7 +13,7 @@
 
     <div class="row text-center pt-3">
       <div class="col" *ngIf="showNoButton">
-        <button class="btn btn-danger"  [style.width.px]='logoWidthNo' [style.height.px]='logoHeightNo' (click)="onClickedNo()">No</button>
+        <button class="btn btn-danger"  [style.width.px]='logoWidthNo' [style.height.px]='logoHeightNo' [style.margin-right.px]='pr' (mouseover)="movebutton()" (click)="onClickedNo()">No</button>
       </div>
       
       <div class="col" *ngIf="showYesButton">
@@ -23,9 +23,11 @@
       
     </div>
 
-    
+   
 
   </div>
-
+  
 </div>
+
+
 
